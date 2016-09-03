@@ -1,0 +1,299 @@
+
+<script>
+
+    $(document).ready(function() {
+    
+        $('#calendar').fullCalendar({
+
+            
+            googleCalendarApiKey: 'AIzaSyDs8ldPAzJ8XwHlCoIiITVvb-J3dIZKmUY',
+            
+            events: {
+                googleCalendarId: 'arnold-j83@sky.com'
+            },
+            eventClick: function(event) {
+                // opens events in a popup window
+                window.open(event.url, 'gcalevent', 'width=500,height=300');
+                return false;
+            },
+            
+            loading: function(bool) {
+                $('#loading').toggle(bool);
+            }
+            
+        });
+       
+    });
+
+</script>
+<div class="jumbotron hero7">
+ <h1 class="heroh1">Apartment Brisas</h1>
+ <h2 class="heroh2">Availability and Booking</h2>
+</div>
+<div class="container">
+	<div class="row">
+        <div class="box">
+            <!--<div class="col-lg-12">
+                <iframe style="width: 100%; height: 400px;" src="https://www.holidaylettings.co.uk/rentals/formentera-del-segura/71324"></iframe>
+            </div>-->
+            <div class="col-lg-12">
+            <h2>Enquire about Availability</h2>
+            <p>Apartment Brisas is available throughout the year, the calender below will show you when apartment brisas is available / booked.</p>
+            <!--<iframe src="https://calendar.google.com/calendar/embed?src=arnold-j83%40sky.com&ctz=Europe/London" style="border: 0" width="400" height="300" frameborder="0" scrolling="no"></iframe>-->
+            <div class="container">
+                <div id="calendar"></div>
+            </div>
+            </div>    
+            <div class="container">
+                <form class="viewType" name="register_form" novalidate ng-submit="registerForm(register_form)">
+                    <fieldset>
+                        <legend>Enquiry Form</legend>
+                    <div class="row">
+                    <div class="col-md-4">
+                        <label>Your Title</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select ng-model="register.selectedTitle" name="selectedTitle" class="form-control">
+                            <option  ng-repeat="title in titles" >{{title}}</option>
+                        </select>
+                    </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                    <div class="col-md-4">
+                        <label>Your Full Name</label>
+                    </div>
+                    <div class="col-md-8">
+                        
+                        <input class="form-control"
+                        type="text" 
+                        placeholder="Enter Your Name" 
+                        name="fullname" 
+                        ng-model="register.fullname" 
+                        ng-minlength=3 
+                        ng-maxlength=50 
+                        required  />
+                    </div>
+                
+                    <div class="col-md-12 error-container" ng-show="register_form.fullname.$dirty 
+                                                        && register_form.fullname.$invalid 
+                                                        && submitted">
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.fullname.$error.required">Please input your name</p>
+                    <p class="error" ng-show="register_form.fullname.$error.minlength">Your name is required to be at least 3 characters</p>
+                    <p class="error" ng-show="register_form.fullname.$error.maxlength">Your name cannot be longer than 50 characters</p>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Your Email Address</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="email" 
+                        placeholder="Enter email address" 
+                        name="email" 
+                        ng-model="register.email" 
+                        ng-minlength=5 
+                        ng-maxlength=40 
+                        required  />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.email.$dirty 
+                                                        && register_form.email.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.email.$error.required">Please input an email</p>
+                    <p class="error" ng-show="register_form.email.$error.minlength">Your email is required to be at least 5 characters</p>
+                    <p class="error" ng-show="register_form.email.$error.maxlength">Your email cannot be longer than 40 characters</p>
+                    <p class="error" ng-show="register_form.email.$error.email">That is not a valid email. Please input a valid email.</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4">
+                    <label>Your Telephone Number</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="number" 
+                        placeholder="Enter your telephone number" 
+                        name="telNumber" 
+                        ng-model="register.telNumber" 
+                        ng-minlength=10 
+                        ng-maxlength=15 
+                        required  />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.telNumber.$dirty 
+                                                        && register_form.telNumber.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.telNumber.$error.required">Please input your phone number</p>
+                    <p class="error" ng-show="register_form.telNumber.$error.minlength">Telepone Numberis required to be at least 10 characters</p>
+                    <p class="error" ng-show="register_form.telNumber.$error.maxlength">Telepone Number cannot be longer than 15 characters</p>
+                    <p class="error" ng-show="register_form.telNumber.$error.number">That is not a number. Please input a valid telephone number.</p>
+                    
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Date from:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="date"
+                        name="dateFrom" 
+                        placeholder="YYYY-MM-DD" 
+                        ng-model="register.dateFrom" 
+                        required  />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.dateFrom.$dirty 
+                                                        && register_form.dateFrom.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.dateFrom.$error.required">Please indicate date from</p>
+                    <p class="error" ng-show="register_form.dateFrom.$error.date">Please enter a valid date</p>
+                    
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Date to:</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control"
+                        type="date" 
+                        placeholder="YYYY-MM-DD" 
+                        name="dateTo" 
+                        ng-model="register.dateTo" 
+                        required  />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.dateTo.$dirty 
+                                                        && register_form.dateTo.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.dateTo.$error.required">Please indicate date to</p>
+                    <p class="error" ng-show="register_form.dateTo.$error.date">Please enter a valid date</p>
+                    
+                    
+                    </div>
+                </div>
+
+                <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Number of Adults</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select ng-model="register.selectedAdults" name="selectedAdults" class="form-control" required>
+                            <option  ng-repeat="adult in adults" >{{adult}}</option>
+                        </select>
+                    </div>
+                    </div>
+
+                <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.selectedAdults.$dirty 
+                                                        && register_form.selectedAdults.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.selectedAdults.$error.required">Please indicate number of Adults</p>
+                    
+                    
+                    </div>
+                </div>
+
+                    <br />
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Number of Children</label>
+                    </div>
+                    <div class="col-md-8">
+                        <select ng-model="register.selectedChildren" name="selectedChildren" class="form-control" required>
+                            <option  ng-repeat="child in children" >{{child}}</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-12 error-container" ng-show="register_form.selectedChildren.$dirty 
+                                                        && register_form.selectedChildren.$invalid 
+                                                        && submitted">
+                    <!--add error messages for email-->
+                    <label style='color: red'>Error:</label>
+                    <p class="error" ng-show="register_form.selectedChildren.$error.required">Please indicate number of Children</p>
+                    
+                    
+                    </div>
+                </div>
+                    <br />
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                <div class="row">
+                <br />
+                    <div class="col-md-12" id="form_data">
+                    <p>Your Name: {{register.selectedTitle}} {{register.fullname}}</p>
+                    <p>Your Email Address: {{register.email}}</p>
+                    <p>Your Telephone Number: {{register.telNumber}}</p>
+                    <p>Date From: {{register.dateFrom}}</p>
+                    <p>Date To: {{register.dateTo}}</p>
+                    <p>Number of Adults: {{register.selectedAdults}}</p>
+                    <p>Number of Children: {{register.selectedChildren}}</p>
+                    </div>
+                </div> 
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center">Terms and conditions</h2>
+                <hr>
+                <ul>
+                    <li>We require a full list of names of the clients renting</li>
+                    <li>We require flight details for smooth change over</li>
+                    <li>We always recommend insurance</li>
+                    <li>A none-refundable deposit of £50 to secure any bookings</li>
+                    <li>REFUNDABLE £50 security deposit required with final balance payment (separate cheque, sent back after holiday)</li>
+                    <li>Remaining balance to be paid in full 4 weeks prior to arrival</li>
+                    <li>40 Euros cleaning cost per booking up to 2 weeks</li>
+                    <li>60 Euros cleaning cost per booking 3 weeks or more</li>
+                    <li>On the day of arrival especially at busy times (clients departing/arriving on same day) there needs to be a swift 'change over', the apartment will be ready by 2pm.</li>
+                    <li>If your flight comes in earlier, we can arrange for bags to be stored in the apartment whilst being cleaned</li>
+                    <li>On the day of departure, vacate the apartment by 10am.</li>
+                </ul>
+                <hr>
+                <h2 class="intro-text text-center">Long Lets</h2>
+                <hr>
+                <ul>
+                    <li>We require a full list of names of the clients letting</li>
+                    <li>We require flight details for smooth change over</li>
+                    <li>We alway recommend insurance</li>
+                    <li>For longer 'Lets' a larger deposit is required and RETURNED after your stay</li>
+                    <li>Balance to be paid in full straight away</li>
+                    <li>Cleaning costs per booking 60 Euros, to be left on the table for cleaner</li>
+                    <li>On the day of arrival especially at busy times (clients departing/arriving on same day) there needs to be a swift 'change over', the apartment will be ready by 2pm. <br />If your flight comes in earlier, we can arrange for bags to be stored in the apartment whilst being cleaned</li>
+                    <li>On the day of departure, vacate the apartment by 10am.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
