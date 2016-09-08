@@ -8,31 +8,29 @@ angular.module('formsApp').config(function($routeProvider) {
 			controller  : 'RegisterController'
 		})
 
-		.when('/', {
+		.when('/home', {
 			templateUrl: 'templates/home.html',
 			controller: 'HomeController'
 		})
-		// route for the about page
 		.when('/about', {
 			'templateUrl': 'templates/about.html',
 			'controller': 'AboutController'
 		})
-		// route for the contact page
 		.when('/option1', {
 			templateUrl: 'templates/option1.html',
 			controller: 'option1Controller'
 		})
-		.when('/option2', {
-			templateUrl: 'templates/option2.html',
-			controller: 'option2Controller'
+		.when('/activities', {
+			templateUrl: 'templates/activities.html',
+			controller: 'activitiesController'
 		})
-		.when('/option3', {
-			templateUrl: 'templates/option3.html',
-			controller: 'option3Controller'
+		.when('/prices', {
+			templateUrl: 'templates/prices.html',
+			controller: 'pricesController'
 		})
-		.when('/option4', {
-			templateUrl: 'templates/option4.html',
-			controller: 'option4Controller'
+		.when('/availability', {
+			templateUrl: 'templates/availability.html',
+			controller: 'availabilityController'
 		})
 
 		.when('/weather', {
@@ -44,6 +42,6 @@ angular.module('formsApp').config(function($routeProvider) {
 			templateUrl: 'templates/gallery.html',
 			controller: 'galleryController'
 		})
-		.otherwise({redirectTo: '/'});
+		.otherwise({redirectTo: '/home'});
 
 });

@@ -392,7 +392,7 @@ footer p {
         clear: both;
     }
 }
-*/
+
 .price-table   {
                 border-collapse: collapse;
                 border-radius:6px;
@@ -412,7 +412,7 @@ footer p {
 .price-table td:nth-child(2n+1) {      
     background-color: yellow;  
 }
-
+*/
 input {
     position: relative;
     width: 150px; height: 20px;

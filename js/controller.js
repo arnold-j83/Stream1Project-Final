@@ -86,9 +86,9 @@ angular.module('formControllers',[])
   $scope.map = $scope.maps[0];
     })
 
-    .controller('option4Controller', function($scope) {
+    .controller('availabilityController', function($scope) {
     $scope.loading = true;
-    $scope.title = "Menu Option 4";
+    $scope.title = "Availability";
     $scope.maps = [{
         
         address: 'Brisas Del Mar, Formentera del Segura, spain',
@@ -152,7 +152,7 @@ angular.module('formControllers',[])
     };
     })
 
-    .controller('option2Controller', function($scope) {
+    .controller('activitiesController', function($scope) {
     $scope.loading = true;
     $scope.title = "Activities";
 
@@ -175,7 +175,7 @@ angular.module('formControllers',[])
   $scope.map = $scope.maps[0];
   })
 
-    .controller('option3Controller', function($scope) {
+    .controller('pricesController', function($scope) {
 
     $scope.loading = true;
     $scope.title = "Menu Option 3";
