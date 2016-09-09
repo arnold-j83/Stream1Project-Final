@@ -86,8 +86,15 @@ angular.module('formControllers',[])
   $scope.map = $scope.maps[0];
     })
 
-    .controller('availabilityController', function($scope) {
+    .controller('availabilityController', function($scope, store) {
     $scope.loading = true;
+
+    var authStorage = {
+            name: "StorageTest"
+        };
+ 
+        store.set('obj', authStorage);
+        
     $scope.title = "Availability";
     $scope.maps = [{
         

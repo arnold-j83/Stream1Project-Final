@@ -47,10 +47,22 @@
 <div class="container">
     <div class="row">
         <div class="box">
-            <div class="col-lg-12">
+            <div class="col-lg-12 text-center">
+                <button type="button" class="btn btn-primary btn-large" data-toggle="modal" data-target="#enquiry-modal">Make an Enquiery</button>
+            </div>
+        </div>
+    </div>
+</div>
+            <div class="modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="enquiry-form-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="todo-form-header">Enquiry Form</h4>
+                </div>
+                <div class="modal-body">
                 <form class="viewType" name="register_form" novalidate ng-submit="registerForm(register_form)">
                     <fieldset>
-                        <legend>Enquiry Form</legend>
                     <div class="row">
                     <div class="col-md-4">
                         <label>Your Title</label>
@@ -246,8 +258,10 @@
                     </div>
                     <br />
                     <div class="row">
-                        <div class="col-md-12">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            
                         </div>
                     </div>
                     <div class="row">
@@ -267,12 +281,13 @@
             </div>
         </div>
     </div>
-</div>    
+</div>
 <div class="container">
     <div class="row">
         <div class="box">
             <div class="col-lg-12">
                 <h2 class="text-center">Terms and conditions</h2>
+                <ul>
                     <li>We require a full list of names of the clients renting</li>
                     <li>We require flight details for smooth change over</li>
                     <li>We always recommend insurance</li>
@@ -296,6 +311,47 @@
                     <li>On the day of arrival especially at busy times (clients departing/arriving on same day) there needs to be a swift 'change over', the apartment will be ready by 2pm. <br />If your flight comes in earlier, we can arrange for bags to be stored in the apartment whilst being cleaned</li>
                     <li>On the day of departure, vacate the apartment by 10am.</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+ 
+    <div class="modal fade" id="todo-modal" tabindex="-1" role="dialog" aria-labelledby="todo-form-modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="todo-form-header">Todo Item</h4>
+                </div>
+                <div class="modal-body">
+                    <form name="todoForm" ng-submit="submitForm()" novalidate>
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" name="title" class="form-control" ng-model="todo.title" required>
+                            <p ng-show="todoForm.title.$pristine" class="help-block">A title is required</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <input type="text" name="description" class="form-control" ng-model="todo.description" required>
+                            <p ng-show="todoForm.password.$pristine" class="help-block">A description is required</p>
+                        </div>
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="form-control" name="status" ng-model="todo.status">
+                                <option value="Todo">Todo</option>
+                                <option value="Doing">Doing</option>
+                                <option value="Done">Done</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

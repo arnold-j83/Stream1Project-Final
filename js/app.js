@@ -1,4 +1,4 @@
-angular.module('formsApp', ['ngRoute','formControllers','formDirectives']);
+angular.module('formsApp', ['ngRoute','formControllers','formDirectives', 'angular-storage']);
 // configure our routes
 angular.module('formsApp').config(function($routeProvider) {
 	$routeProvider
