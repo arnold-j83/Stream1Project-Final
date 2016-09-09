@@ -25,6 +25,7 @@ angular.module('formDirectives',[]).directive('ngSubValid', [function() {
     }
 }])
 
+//make map directive, allow us to inject map into template when called
 .directive('makeMap', function() {
         var directive = {
             templateUrl: 'templates/directives/map.html',

@@ -1,8 +1,10 @@
+//Angular app name and dependencies
 angular.module('formsApp', ['ngRoute','formControllers','formDirectives', 'angular-storage']);
 // configure our routes
 angular.module('formsApp').config(function($routeProvider) {
 	$routeProvider
-	
+	//ngRoute contains routeProvider
+	//below - each route has a template html page and a controller ng-controller directive binds controller to specific html
 		.when('/form', {
 			templateUrl : 'templates/registerForm.html',
 			controller  : 'RegisterController'
@@ -15,10 +17,6 @@ angular.module('formsApp').config(function($routeProvider) {
 		.when('/about', {
 			'templateUrl': 'templates/about.html',
 			'controller': 'AboutController'
-		})
-		.when('/option1', {
-			templateUrl: 'templates/option1.html',
-			controller: 'option1Controller'
 		})
 		.when('/activities', {
 			templateUrl: 'templates/activities.html',

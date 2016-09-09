@@ -1,13 +1,8 @@
-
+<!--jQuery which initialises the calender The calender is a JavaScript library referenced in the index page fullcalendar.min.js and gcal.js-->
 <script>
-
     $(document).ready(function() {
-    
-        $('#calendar').fullCalendar({
-
-            
+        $('#calendar').fullCalendar({   
             googleCalendarApiKey: 'AIzaSyDs8ldPAzJ8XwHlCoIiITVvb-J3dIZKmUY',
-            
             events: {
                 googleCalendarId: 'arnold-j83@sky.com'
             },
@@ -24,7 +19,6 @@
         });
        
     });
-
 </script>
 <div class="jumbotron hero7">
  <h1 class="heroh1">Apartment Brisas</h1>
@@ -53,12 +47,13 @@
         </div>
     </div>
 </div>
-            <div class="modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="enquiry-form-modal" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="todo-form-header">Enquiry Form</h4>
+<div class="modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="enquiry-form-modal" aria-hidden="true">
+<!-- Bootstrap modal popup which includes the angular form-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="todo-form-header">Enquiry Form</h2>
                 </div>
                 <div class="modal-body">
                 <form class="viewType" name="register_form" novalidate ng-submit="registerForm(register_form)">
@@ -70,6 +65,7 @@
                     <div class="col-md-8">
                         <select ng-model="register.selectedTitle" name="selectedTitle" class="form-control">
                             <option  ng-repeat="title in titles" >{{title}}</option>
+                            <!--titles added to &$scope in the controller-->
                         </select>
                     </div>
                     </div>
@@ -89,7 +85,7 @@
                         ng-maxlength=50 
                         required  />
                     </div>
-                
+                    <!--Angular form validation different warnings shows depending on the error $dirty means the control has been interacted with $invalid means that the information entered does not meet the requirements for the control-->
                     <div class="col-md-12 error-container" ng-show="register_form.fullname.$dirty 
                                                         && register_form.fullname.$invalid 
                                                         && submitted">
@@ -266,6 +262,7 @@
                     </div>
                     <div class="row">
                     <br />
+                    <!--This section displays the information entered into the form-->
                         <div class="col-md-12" id="form_data">
                         <p>Your Name: {{register.selectedTitle}} {{register.fullname}}</p>
                         <p>Your Email Address: {{register.email}}</p>
