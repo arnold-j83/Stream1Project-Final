@@ -61,4 +61,23 @@ angular.module('formDirectives',[]).directive('ngSubValid', [function() {
             }
         };
         return directive;
-    });
+    })
+.directive('priceTable6', function() {
+    return {
+    restrict: 'A',    // A -> attribute
+    templateUrl: 'templates/directives/price-table-6.html'
+  };
+})
+.directive('priceTable4', function() {
+    return {
+    restrict: 'A',    // A -> attribute
+    templateUrl: 'templates/directives/price-table-4.html'
+  };
+})
+
+.directive('priceTable2', function() {
+    return {
+    restrict: 'A',    // A -> attribute
+    templateUrl: 'templates/directives/price-table-2.html'
+  };
+});
