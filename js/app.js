@@ -1,5 +1,4 @@
 //Angular app name and dependencies
-//angular.module('formsApp', ['ngRoute','formControllers','formDirectives', 'angular-storage', 'jsonService']);
 angular.module('formsApp', ['ngRoute','formControllers','formDirectives', 'angular-storage', 'myService']);
 // configure our routes
 angular.module('formsApp').config(function($routeProvider) {
@@ -14,11 +13,6 @@ angular.module('formsApp').config(function($routeProvider) {
 		.when('/home', {
 			templateUrl: 'templates/home.html',
 			controller: 'HomeController'
-		})
-
-		.when('/test', {
-			templateUrl: 'templates/test.html',
-			controller: 'TestController'
 		})
 		.when('/about', {
 			'templateUrl': 'templates/about.html',

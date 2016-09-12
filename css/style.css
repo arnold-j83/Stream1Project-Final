@@ -13,14 +13,14 @@ body {
     -o-background-size: cover;
 }
 #calendar {
-        width: 80%;
-        margin: 0 auto;
-    }
+    width: 80%;
+    margin: 0 auto;
+}
 input.ng-invalid {
-  border: 1px solid red;
+    border: 1px solid red;
 }
 input.ng-valid {
-  border: 1px solid green;
+    border: 1px solid green;
 }
 
 rect:hover {
@@ -37,30 +37,31 @@ rect:hover {
     box-shadow: 5px 2px 2px;
 }
 
-
-
-.hidden{display:none;}
+.hidden{
+    display:none;
+}
 
 .title{
     font: 25px sans-serif;
 }
 
 .axis text {
-  font: 10px sans-serif;
+    font: 10px sans-serif;
 }
  
 .axis path,
 .axis line {
-  fill: none;
-  stroke: #000;
-  shape-rendering: crispEdges;
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
 }
 
-.img100{width: 100%;}
+.img100{
+    width: 100%;
+}
 
 h1 {
     font-family: comfortaa;
-    
     color: #23a6c7;
     font-style: normal;
     font-weight: normal;
@@ -107,12 +108,6 @@ h5 {
     -moz-font-smoothing: antialiased;
     -ms-font-smoothing: antialiased;
 }
-h6 {
-    text-transform: uppercase;
-    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
 
 p {
     font-size: 1.25em;
@@ -129,107 +124,27 @@ hr {
     border-color: #999999;
 }
 
-/*.brand,
-.address-bar {
-    display: none;
-}
-
-.navbar-brand {
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 2px;
-}
-
-.navbar-nav {
-    text-transform: uppercase;
-    font-weight: 400;
-    letter-spacing: 3px;
-}*/
-
 .navbar {
     margin-bottom: 0;
     padding-bottom: 0;
     border-radius: 0px;
 }
 .jumbotron {
-  padding: 0px;
-  margin: 0px;
-  background-color: #f1f1f1;
-  background-repeat: no-repeat;
-  display: block;
-  background-size:cover;
-  width: 100%;
-  padding: 0px;
-  margin-bottom: 0px;
-  margin-top: 0px;
-  text-align: center;
-  color: #fff;
-
-}
-
-
-.hero1{
-    background: url('../img/guardamar-beach-jumbo.jpg');
-    height: 600px;
+    padding: 0px;
+    margin: 0px;
+    background-color: #f1f1f1;
     background-repeat: no-repeat;
     display: block;
     background-size:cover;
-
-    margin: 0;
-    padding: 0;
-    vertical-align: center;  
-    
-    overflow: hidden;
-    font-family: comfortaa;
-  
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-  
-
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    text-align: center;
+    color: #fff;
 }
 
-.hero2{
-    
-    min-height: 200px;
-    background-repeat: no-repeat;
-    display: block;
-    background-size:cover;
 
-    margin: 0;
-    padding: 0;
-    vertical-align: center;  
-    
-    overflow: hidden;
-    font-family: comfortaa;
-  
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.hero3{
-    background: url('../img/brisas-location-jumbo.jpg');
-    height: 600px;
-    background-repeat: no-repeat;
-    display: block;
-    background-size:cover;
-
-    margin: 0;
-    padding: 0;
-    vertical-align: center;  
-    white-space: nowrap;
-    overflow: hidden;
-    font-family: comfortaa;
-  
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-  
-
-}
 .heroh1 {
     font-size: 128px;
     color: #fff;
@@ -314,138 +229,12 @@ footer p {
     display: none;
 }
 
-    
- /*   .brand {
-        display: inherit;
-        margin: 0;
-        padding: 30px 0 10px;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-        font-size: 5em;
-        font-weight: 700;
-        line-height: normal;
-        color: #fff;
-    }
-
-    .top-divider {
-        margin-top: 0;
-    }
-
-    .img-left {
-        float: left;
-        margin-right: 25px;
-    }
-
-    .address-bar {
-        display: inherit;
-        margin: 0;
-        padding: 0 0 40px;
-        text-align: center;
-        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-        text-transform: uppercase;
-        font-size: 1.25em;
-        font-weight: 400;
-        letter-spacing: 3px;
-        color: #fff;
-    }
-
-    .navbar {
-        border-radius: 0;
-    }
-
-    /*.navbar-header {
-        display: none;
-    }
-
-    .navbar {
-        min-height: 0;
-    }
-
-    .navbar-default {
-        border: none;
-        background: #fff;
-        background: rgba(255,255,255,0.9);
-    }
-
-    .nav>li>a {
-        padding: 35px;
-    }
-
-    .navbar-nav>li>a {
-        line-height: normal;
-    }
-
-    .navbar-nav {
-        display: table;
-        float: none;
-        margin: 0 auto;
-        table-layout: fixed;
-        
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .box:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-}
-
-.price-table   {
-                border-collapse: collapse;
-                border-radius:6px;
-                -moz-border-radius:6px;
+@media (min-width: 1200px) {
+    .heroh1 {
+            font-size: 72px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000000;
             }
- 
-    .price-table, td, th   {
-                        border: 1px solid black;
-                        text-align: center;
-                        padding: 5px;
-
-                    }
-    .price-table th {background-color: cyan;
-            text-align: center;
-            font-weight: Bolder;}
-        .price-table td {text-align: center;}
-.price-table td:nth-child(2n+1) {      
-    background-color: yellow;  
-}
-*/
-input {
-    position: relative;
-    width: 150px; height: 20px;
-    color: white;
-}
-
-input:before {
-    position: absolute;
-    top: 3px; left: 3px;
-    content: attr(data-date);
-    display: inline-block;
-    color: black;
-}
-
-input::-webkit-datetime-edit, input::-webkit-inner-spin-button, input::-webkit-clear-button {
-    display: none;
-}
-
-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 3px;
-    right: 0;
-    color: black;
-    opacity: 1;
-}
-
-
-    @media (min-width: 1200px) {
-.heroh1 {
-        font-size: 72px;
-        color: #fff;
-        text-shadow: 2px 2px 4px #000000;
-        }
 
     .heroh2 {
         font-size: 64px;
@@ -522,25 +311,21 @@ input::-webkit-calendar-picker-indicator {
         justify-content: center;
         flex-direction: column;
     }
-
-
 }
  
 /* Landscape tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-.heroh1 {
+    .heroh1 {
         font-size: 36px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .heroh2 {
         font-size: 28px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .hero1{
@@ -617,18 +402,16 @@ input::-webkit-calendar-picker-indicator {
  
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
-.heroh1 {
+    .heroh1 {
         font-size: 36px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .heroh2 {
         font-size: 28px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .hero1{
@@ -700,13 +483,12 @@ input::-webkit-calendar-picker-indicator {
         justify-content: center;
         flex-direction: column;
     }
-
 }
  
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
 
-.heroh1 {
+    .heroh1 {
         font-size: 42px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
@@ -740,7 +522,7 @@ input::-webkit-calendar-picker-indicator {
         flex-direction: column;
     }
 
-.hero4{
+    .hero4{
         background: url('../img/mountainbike.jpg');
         height: 200px;
         background-repeat: no-repeat;
@@ -797,14 +579,12 @@ input::-webkit-calendar-picker-indicator {
         font-size: 36px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .heroh2 {
         font-size: 28px;
         color: #fff;
         text-shadow: 2px 2px 4px #000000;
-
     }
 
     .hero1{
