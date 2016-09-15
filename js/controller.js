@@ -32,10 +32,10 @@ angular.module('formControllers',[])
     //Angular Form Below
     $scope.register = {};
     //sets submitted status to false
-    //$scope.submitted = false;
+    $scope.submitted = false;
     //sets  uniqueusername and uniqueemail so form can validate on submit
-    //$scope.uniqueusername = true;
-    //$scope.uniqueemail = true;
+    $scope.uniqueusername = true;
+    $scope.uniqueemail = true;
     $scope.titles = ['Mr','Mrs','Miss','Ms', 'Dr', 'Sir'];
     //adds options to the select box in the form
     $scope.selectedTitle = $scope.title[1];
@@ -51,25 +51,25 @@ angular.module('formControllers',[])
       $scope.uniqueusername = true;
       $scope.uniqueemail = true;
         
-        if (registerForm.$valid) {
-        //continue with form processing
-        $scope.submitted = false;
-        //continue with form processing
-        alert("Form Valid: " + $scope.register.fullname + " " +  $scope.register.email);
-          //$scope.register = {}; //reset the form
-          //return; // return from function
-          //use a service to check for validity of username
-          $scope.uniquefullname = true; 
-          //use a service to check for validity of email
-          $scope.uniqueemail = true;
-            if ($scope.uniquefullname &&
-              $scope.uniqueemail ) {
-          }
+      if (registerForm.$valid) {
+      //continue with form processing
+      $scope.submitted = false;
+      //continue with form processing
+      alert("Form Valid: " + $scope.register.fullname + " " +  $scope.register.email);
+        //$scope.register = {}; //reset the form
+        //return; // return from function
+        //use a service to check for validity of username
+        $scope.uniquefullname = true; 
+        //use a service to check for validity of email
+        $scope.uniqueemail = true;
+          if ($scope.uniquefullname &&
+            $scope.uniqueemail ) {
         }
-        else {
-          console.log("form is invalid");
-          $scope.submitted = true;
-        }
+      }
+      else {
+        console.log("form is invalid");
+        $scope.submitted = true;
+      }
       
     };
   })
