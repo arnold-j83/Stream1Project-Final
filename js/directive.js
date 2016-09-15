@@ -80,4 +80,11 @@ angular.module('formDirectives',[]).directive('ngSubValid', [function() {
     restrict: 'A',    // A -> attribute
     templateUrl: 'templates/directives/price-table-2.html'
   };
+})
+
+.directive('weatherTable', function(){
+    return {
+        restrict: 'A',
+        templateUrl: 'templates/directives/weather-table.html'
+    };
 });

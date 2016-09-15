@@ -86,25 +86,21 @@ angular.module('formControllers',[])
     $scope.title = "Rental Rates";
     var URL = "js/price.json";
     $scope.prices = {}; 
-        MyService.getPrice(URL).then(function(results) {
-            $scope.prices = results.data;
-        }).catch(function(err) {
-            console.log(err);
-        });
+    MyService.getPrice(URL).then(function(results) {
+      $scope.prices = results.data;
+    }).catch(function(err) {
+      console.log(err);
+    });
   })
 
   .controller('weatherController', function($scope, MyService){
+    
     $scope.title = "Weather";
-      var URL = "http://api.openweathermap.org/data/2.5/forecast/city?q=alicante&APPID=4dd1460040170cc990568caae91e18ca&units=metric";
-      //console.log(URL);
-      $scope.weathers = {};
-      MyService.getPrice(URL).then(function(results) {
-        $scope.weathers = results.data;
-      }).catch(function(err) {
+    var URL = "http://api.openweathermap.org/data/2.5/forecast/city?q=alicante&APPID=4dd1460040170cc990568caae91e18ca&units=metric";
+    $scope.weathers = {};
+    MyService.getPrice(URL).then(function(results) {
+      $scope.weathers = results.data;
+    }).catch(function(err) {
           console.log(err);
-        }); 
-  })
-
-  .controller('galleryController', function($scope){
-    $scope.title = "Gallery";
-  })
+    }); 
+  });

@@ -4,6 +4,8 @@ http://api.openweathermap.org/data/2.5/forecast/city?id=524901&APPID=4dd14600401
 
 http://api.openweathermap.org/data/2.5/forecast/city?q=alicante&APPID=4dd1460040170cc990568caae91e18ca
 
+http://api.openweathermap.org/data/2.5/weather?q=alicante,es&appid=4dd1460040170cc990568caae91e18ca
+
 Submit forms to API serverless architecture for submitting form data
 
 Google forms sends to google doc file 

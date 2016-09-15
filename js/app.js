@@ -35,11 +35,7 @@ angular.module('formsApp').config(function($routeProvider) {
 			templateUrl: 'templates/weather.html',
 			controller: 'weatherController'
 		})
-
-		.when('/gallery', {
-			templateUrl: 'templates/gallery.html',
-			controller: 'galleryController'
-		})
+		
 		.otherwise({redirectTo: '/home'});
 
 });

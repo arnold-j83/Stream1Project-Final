@@ -117,23 +117,9 @@ var svg = canvas.append("g")
 	<div class="row">
 		<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 		<h2>The 5 day weather forecast for the Costa Blanca region</h2>
-	    	<table class="table table-hover">
-	    		<thead>
-			        <tr>
-			            <th>Date / Time</th>
-			            <th>Temp</th>
-			            <th>Description</th>
-			            <th>Icon</th>
-			        </tr>
-	    		</thead>
-			        <tr ng-repeat="weathe in weathers.list">
-			            <td>{{weathe.dt_txt | date}}</td>
-			            <td>{{weathe.main.temp_max}}</td>
-			            <td>{{weathe.weather[0].description}}</td>
-			            <td><img src="http://openweathermap.org/img/w/{{weathe.weather[0].icon}}.png" alt="{{weathe.weather[0].description}}"/></td>
-
-			        </tr>
-			</table>
+	    	<div class="table-responsive">
+                <div weather-table></div>
+            </div>
 	    </div>
 	    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
 			<h2>The chart below shows the average temperatures in the Costa Blanca region</h2>
