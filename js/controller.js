@@ -29,16 +29,13 @@ angular.module('formControllers',[])
       
     $scope.title = "Availability";
 
-    var URL = "https://www.googleapis.com/calendar/v3/calendars/arnold-j83@sky.com/events?key=AIzaSyDs8ldPAzJ8XwHlCoIiITVvb-J3dIZKmUY";
-
-    $scope.map = $scope.maps[0];
     //Angular Form Below
     $scope.register = {};
     //sets submitted status to false
-    $scope.submitted = false;
+    //$scope.submitted = false;
     //sets  uniqueusername and uniqueemail so form can validate on submit
-    $scope.uniqueusername = true;
-    $scope.uniqueemail = true;
+    //$scope.uniqueusername = true;
+    //$scope.uniqueemail = true;
     $scope.titles = ['Mr','Mrs','Miss','Ms', 'Dr', 'Sir'];
     //adds options to the select box in the form
     $scope.selectedTitle = $scope.title[1];
